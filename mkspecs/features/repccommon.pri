@@ -3,7 +3,7 @@ cmd = $${QT.remoteobjects.bins}/repc
 contains(QMAKE_HOST.os, Windows) {
     cmd = $$system_path($${cmd}.exe)
 }
-exists($$cmd): QT_TOOL.repc.binary = $$cmd
+false:exists($$cmd): QT_TOOL.repc.binary = $$cmd
 
 # qtPrepareTool honors QT_TOOL.repc.binary if set
 qtPrepareTool(QMAKE_REPC, repc)
